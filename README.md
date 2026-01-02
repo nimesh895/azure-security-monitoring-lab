@@ -8,7 +8,7 @@
 - Applied Azure Policy to restrict VM sizes and regions.
 - Integrated Azure Activity Logs and VM events into Log Analytics Workspace.
 - Configured Microsoft Sentinel for security monitoring with basic KQL queries.
-- Optimized costs to stay under $15 using Azure free credits.
+- Kept total lab cost low by monitoring usage and cleaning up resources promptly.
 
 **Azure Services Used**:
 - Virtual Machines
@@ -24,8 +24,8 @@
 Resource Group (SecureLabRG)
 ├── Virtual Network (SecureLabVNet)
 │   └── Subnet (default)
-├── VM1 (Standard_B1ls, Windows Server)
-├── VM2 (Standard_B1ls, Windows Server)
+├── VM1 (Standard_D4s_v3, 4 vCPUs, 16 GiB RAM, Windows Server)
+├── VM2 (Standard_D4s_v3, 4 vCPUs, Windows Server)
 ├── Network Security Group (SecureLabNSG) → Restricts RDP to specific IP
 ├── Log Analytics Workspace (SecureLabLA)
 └── Microsoft Sentinel (connected to SecureLabLA)
@@ -73,11 +73,11 @@ Resource Group (SecureLabRG)
 ### 10. KQL Query Example in Sentinel (Security Event Investigation)
 ![Run KQL query](run_kql_query.png)
 
-## Cost Optimization
-- Used low-cost B-series burstable VMs (B1ls).
-- Deallocated VMs when idle.
-- Leveraged free tiers for Log Analytics (first 5 GB/month) and Sentinel ingestion.
-- Total lab cost kept under **$15** with Azure free credits.
+## Cost Management
+- Used **Standard_D4s_v3** VMs (4 vCPUs, 16 GiB RAM) for better performance during lab exercises.
+- Monitored costs regularly via Cost Management + Billing.
+- Deallocated VMs when not in use and deleted the entire resource group at project completion to avoid ongoing charges.
+- Leveraged free tiers for Log Analytics (first 5 GB/month) and Sentinel ingestion. with Azure free credits.
 
 ## Cleanup
 All resources were deployed in a single resource group `SecureLabRG` and deleted at the end to avoid ongoing charges.
