@@ -51,7 +51,7 @@ Resource Group (SecureLabRG)
 ![Add NSG rule allow my public IP](add_nsg_rule_allow_my_public_ip.png)
 
 ### 5. RDP Connectivity Test
-![Check RDP login to Azure from built-in Windows Remote Desktop](images/check_RDP_login_to_azure_from_builtin_windows_remote_desktop.png)
+![Check RDP login to Azure from built-in Windows Remote Desktop](check_RDP_login_to_azure_from_builtin_windows_remote_desktop.png)
 
 ### 6. Role-Based Access Control (RBAC) – Scoped Least-Privilege
 ![Assign VM1 role Virtual Machine Contributor](assign_vm1_role_virtual_machine_contributor.png)
