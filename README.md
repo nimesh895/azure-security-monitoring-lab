@@ -22,12 +22,19 @@
 ## Lab Architecture Overview
 
 Resource Group (SecureLabRG)
+
 ├── Virtual Network (SecureLabVNet)
+
 │   └── Subnet (default)
+
 ├── VM1 (Standard_D4s_v3, 4 vCPUs, 16 GiB RAM, Windows Server)
+
 ├── VM2 (Standard_D4s_v3, 4 vCPUs, Windows Server)
+
 ├── Network Security Group (SecureLabNSG) → Restricts RDP to specific IP
+
 ├── Log Analytics Workspace (SecureLabLA)
+
 └── Microsoft Sentinel (connected to SecureLabLA)
 
 
